@@ -1,0 +1,38 @@
+.button{
+    cursor: pointer;
+    box-shadow: 0 0 5px #000000;
+    width: 50px;
+    height: 50px;
+    background-image: url(https://maverickcollective.org/wp-content/uploads/2021/05/home-icon.png);
+    background-size: cover;
+}
+.button--account{
+    cursor: pointer;
+    box-shadow: 0 0 5px #000000;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    padding: 0px;
+    font-weight: bold;
+}
+.Menu{
+    color: #ffffff;
+    font-size: 40px;
+    border-bottom: 3px #cdcdcd solid;
+    background-color: #454B4B;
+    border: 0px #ccc solid;
+    text-align:right;
+}
+#content{
+    padding: 10px;
+}
+
+#MainShow {
+    margin: 10px 5px;
+    padding: 15px 0px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+    width: 920px;
+    float: left;
+    padding: 10px
+}
