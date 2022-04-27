@@ -22,17 +22,45 @@
     background-color: #454B4B;
     border: 0px #ccc solid;
     text-align:right;
+    margin:0px;
+    padding:0px;
+    border:0px;
 }
 #content{
     padding: 10px;
 }
 
 #MainShow {
-    margin: 10px 5px;
+    margin-left: 200px;
+    margin-right: 10px;
     padding: 15px 0px;
     background-color: #fff;
     border: 1px #ccc solid;
-    width: 920px;
+    width: 1500px;
     float: left;
-    padding: 10px
+    padding: 10px;
+    
+}
+.body-color-scroll{
+    overflow-y: scroll;
+    background-color: #f7f8f9!important;
+}
+.menu{
+    position: fixed;
+    left:20px;
+}
+.no-bullet{
+    text-decoration: none;
+    color:black;
+    font-size:20px;
+}
+a:hover{
+    text-decoration: underline;
+}
+#ol_id{
+    list-style-type: none;
+}
+
+#paragraph{
+    font-size: 20px;
 }
