@@ -9,11 +9,16 @@
 .button--account{
     cursor: pointer;
     box-shadow: 0 0 5px #000000;
-    width: 70px;
+    width: 100px;
     height: 50px;
     text-align: center;
-    padding: 0px;
     font-weight: bold;
+    z-index: 10;
+    position:relative;
+    top:0px;
+    left:20px;
+    font-size: 17px;
+    
 }
 .Menu{
     color: #ffffff;
@@ -22,12 +27,17 @@
     background-color: #454B4B;
     border: 0px #ccc solid;
     text-align:right;
-    margin:0px;
-    padding:0px;
+    padding:10px;
     border:0px;
+    width: 100%;
+    position: absolute;
+    top:0px;
+    z-index: 0;
 }
 #content{
     padding: 10px;
+    margin-right: 17px;
+    font-size: 35px;
 }
 
 #MainShow {
@@ -64,3 +74,7 @@ a:hover{
 #paragraph{
     font-size: 20px;
 }
+div.list{
+    border-style: solid;
+}
+
