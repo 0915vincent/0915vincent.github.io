@@ -5,22 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link href="index.css" rel="stylesheet">
+    <script src="main.js"></script>
 </head>
-<body>
-    <div class="scene">
-        <div class="floor"></div>
-        <div class="cube">
-          <div class="front"></div>
-          <div class="back"></div>
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="top">
-            <div class="ballShadow"></div>
-          </div>
-          <div class="bottom"></div>
+<body class="body-color-scroll" >
+    
+    <button class="button--account"><a href="login.html" class="SignIn">Sign in</a></button>
+    
+    <div>
+        <div class="Menu">
+            <a id="content">Docker</a>
+            <a id="content">Unknown</a>
+            <a id="content">Unknown</a> 
+            <input type="button" onclick="location.href='login.html'" class="button">
         </div>
-        <div class="ball"></div>
-      </div>
+        
+        <div>
+            
+        </div>
+
+        <div id="MainShow">
+            <!--<h1>Vincent's Web Page</h1>-->
+            <div class="inner">
+                <p>(網站功能簡介)註冊帳號之後=>登入=>可以更改自己的頭像(按edit提交檔案)=>提交之返回前一個網頁提交表單=>可以看到自己的頭像改了=>按home可以回到主頁面並且右上角頭像也會改變(都是使用php)</p>
+                <h1>Docker架網站 (心得筆記)</h1>
+
+        
+                <h2 id="first">創立container,volume</h2>
+                <pre>將httpd的image檔下載下來 => docker pull httpd</pre>
+                <img src="image/docker1.png" class="center">
+                <pre>確認是否成功下載 => docker image ls 得到Image id (Ex:c58ef9bfbb57)</pre>
+                <img src="image/docker2.png" class="center">
+                <pre>創造一個volume => docker volume create name</pre>
+                <img src="image/docker3.png" class="center">
+                <pre>確認是否成功建立volume => docker volume ls</pre>
+                <img src="image/docker4.png" class="center">
+                <pre>查看volume內容 => docker volume inspect name</pre>
+                <img src="image/docker5.png" class="center">
+                <pre>
+創造一個container並和volume連結 => 
+docker run -itd -v name:/usr/local/apache2/htdocs image id
+name是先前volume的名字(Ex:vincent)
+/usr/loacal/apache2/htdocs是之後container內的檔案路徑
+Image id是先前第二步得到的
+                </pre>
+                <img src="image/docker6.png" class="center">
+                <pre>查看container是否建立 => docker ps -a 得到container id</pre>
+                <img src="image/docker7.png" class="center">
+                <pre>執行container => docker run -it container id /bin/bash (container id是上一步得到的)</pre>
+                <img src="image/docker8.png" class="center">
+                <pre>
+進到container內後前往到htdocs/資料夾內 =>
+ls -> cd htdocs/ -> ls  即可看到裡面已有的index.html
+接著創立一個檔案 => touch info.txt
+                </pre>
+                <img src="image/docker9.png" class="center">
+                <pre>利用exit 離開container</pre>
+                <pre>
+查看container是否連接到volume => cd volume_pathway
+volume_pathway是第五步內”Mount point” 內的路徑,接著ls便能看到剛剛創立的info.txt了!!!
+                </pre>
+                <img src="image/docker10.png" class="center">
+
+                <br>
+                <br>
+
+
+                <h2 id="second">逆向回去</h2>
+                <pre>在volume內建立一個檔案 => touch new.txt 接著ls確認是否成功新增</pre>
+                <img src="image/docker11.png" class="center">
+                <pre>回到container內 => docker start container id ,因為剛才exit container了,所以要重新開啟</pre>
+                <img src="image/docker12.png" class="center">
+                <pre>
+重啟一次container => docker exec -it container id /bin/bash
+接著進到htdocs資料夾 => cd htdocs/
+最後ls
+                </pre>
+                <img src="image/docker13.png" class="center">
+                <br>
+                <br>
+
+
+                <h2 id="third">如何打開建立的網頁?</h2>
+                <pre>先下載資源包 => apt-get update</pre>
+                <img src="image/docker14.png" class="center">
+                <pre>再下載另一個資源包 => apt-get install -y iproute2</pre>
+                <img src="image/docker15.png" class="center">
+                <pre>顯示ip 位置 => ip addr show ,得到ip位置 172.17.0.5</pre>
+                <img src="image/docker16.png" class="center">
+                <pre>打開網頁輸入172.17.0.5就可以看到了!!! (如果失敗請確認網址前面是http而非https)</pre>
+                <img src="image/docker17.png" class="center">
+                
+            
+
+        </div>
+            </div>
+            
+        
+        <nav class="menubox">
+            <ol id="ol_id" >
+                <li><a  class="no-bullet" onclick="goto(first)">&#x203A; First</a></li>
+                <li><a  class="no-bullet" onclick="goto(second)">&#x203A; Second</a></li>
+                <li><a  class="no-bullet" onclick="goto(third)">&#x203A; Third</a></li>
+            </ol>
+        </nav>
+        
+        
+
+
+        
+    </div>
+
 </body>
 </html>
