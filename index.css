@@ -1,0 +1,137 @@
+
+.button{
+    cursor: pointer;
+    box-shadow: 0 0 5px #000000;
+    width: 60px;
+    height: 60px;
+    background-image: url(https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png);
+    background-size: cover;
+    border-radius:50%;
+    margin-right: 25px;
+}
+.SignIn{
+    text-decoration: none;
+    color:black;
+}
+.button--account{
+    cursor: pointer;
+    box-shadow: 0 0 5px #000000;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    position:relative;
+    top:0px;
+    left:20px;
+    font-size: 17px;
+    margin-top:0.5%;
+    
+}
+
+
+#button--width{
+    width:50px;
+    height: 50px;
+    color:#454B4B;
+}
+.Menu{
+    color: #ffffff;
+    font-size: 40px;
+    border-bottom: 3px #cdcdcd solid;
+    background-color: #454B4B;
+    border: 0px #ccc solid;
+    text-align:right;
+    padding:10px;
+    border:0px;
+    width: 100%;
+    height: 60px;
+    line-height: 70px;
+    position: absolute;
+    top:0px;
+    z-index: 0;
+    left: 0px;
+    
+   
+}
+#content{
+    padding: 10px;
+    margin-right: 17px;
+    font-size: 35px;
+    line-height:70px;
+    vertical-align: top;
+   
+}
+
+#MainShow {
+    margin-left: 400px;
+    margin-top: 30px;
+    padding: 15px 0px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+    width: 1200px;
+    float: left;
+    padding: 10px;
+    
+}
+
+.body-color-scroll{
+    overflow-y: scroll;
+    background-color: #f7f8f9!important;
+    overflow-x: hidden;
+}
+.menubox{
+    position: fixed;
+    left:20px;
+    top: 100px;
+    border-style: solid;
+    text-align: center;
+}
+#ol_id{
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.no-bullet{
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+}
+.no-bullet:hover{
+    text-decoration: underline;
+}
+
+
+#paragraph{
+    font-size: 20px;
+    padding-right:50px;
+    padding-left: 50px;
+}
+div.list{
+    border-style: solid;
+}
+#About, #Home, #Contact{
+    font-size: 40px;
+}
+.center{
+    display: block;
+    margin-left: 8rem;
+    
+    width: 60%;
+}
+pre{
+    font-size :1rem;
+    margin-left: 4rem;
+}
+h2{
+    margin-left: 2rem;
+}
+li{
+    text-align: left;
+}
+h1{
+    font-size:3rem;
+}
+.disclaimer{
+    display: none;
+}
